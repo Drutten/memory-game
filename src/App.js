@@ -13,11 +13,9 @@ function App() {
       'https://i.postimg.cc/sg3WzRtx/apple.png',
       'https://i.postimg.cc/WbLr9Z8M/cat.png',
       'https://i.postimg.cc/Hx8czW7Z/coffee.png',
-      'https://i.postimg.cc/tJh10rkF/dessert.png',
       'https://i.postimg.cc/Rhr3Dr7M/dog.png',
       'https://i.postimg.cc/BQ0L50Zp/drink.png',
       'https://i.postimg.cc/1R6VNtS4/ferris-wheel.png',
-      'https://i.postimg.cc/nc4mNLSN/house.png',
     ]
 
     const randomize = (a, b) => {
@@ -41,7 +39,6 @@ function App() {
     <div className='App'>
       <div className='game-area'>
         <h1>Memory Game</h1>
-        <button className='new-game'>New Game</button>
         <ul className='card-area'>
           {cards.map((card, index) => (
             <li key={index}>
@@ -49,6 +46,7 @@ function App() {
             </li>
           ))}
         </ul>
+        <button className='new-game'>New Game</button>
       </div>
     </div>
   );

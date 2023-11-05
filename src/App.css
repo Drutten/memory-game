@@ -1,42 +1,110 @@
 .App {
- color: white;
+ color: rgb(223, 103, 52);
 }
 
 h1 {
   margin: 8px;
   font-size: 28px;
+  text-align: center;
 }
 
 .game-area {
   text-align: center;
-  width: 620px;
-  margin: 0 auto;
-}
-
-.card-area {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.card-area li {
- margin: 6px;
+  width: 90%;
+  margin: 0 auto 40px auto;
 }
 
 .new-game {
-  position: absolute;
-  top: 40px;
-  left: 40px;
   background: none;
-  border: 2px solid white;
+  border: 2px solid rgb(223, 103, 52);
   border-radius: 4px;
   padding: 6px 12px;
-  color: white;
+  color: rgb(223, 103, 52);
   cursor: pointer;
 }
 
 button:hover {
-  background: rgb(244, 144, 102);
+  background: rgb(247, 243, 242);
+}
+
+/* Base mobile styles */
+.card-area {
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-area li {
+  width: 70px;
+  display: flex; /* Make each list item a flex container to center the card */
+  justify-content: center; /* Center card horizontally */
+  align-items: center; /* Center card vertically */
+  margin: 6px;
+}
+
+img {
+  width: 100%; /* Make image fill the card */
+  object-fit: cover;
+}
+
+/* Wider screens: 370px */
+@media (min-width: 370px) {
+  .card-area li {
+    width: 90px;
+  }
+}
+
+/* Wider screens: 450px */
+@media (min-width: 450px) {
+  .game-area {
+    width: 90%;
+  }
+  .card-area li {
+    width: 100px;
+  }
+}
+
+/* Wider screens: 500px */
+@media (min-width: 500px) {
+  .game-area {
+    width: 80%;
+  }
+  .card-area li {
+    width: 120px;
+  }
+}
+
+/* Wider screens: 600px */
+@media (min-width: 600px) {
+  .card-area li {
+    width: 130px;
+  }
+}
+
+/* Wider screens: 850 */
+@media (min-width: 850px) {
+  .game-area {
+    width: 80%;
+  }
+  .card-area li {
+    width: 148px;
+  }
+  .new-game {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .game-area {
+    width: 80%; /* Adjust width for larger screens */
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .card-area li {
+    width: 180px;
+  }
 }

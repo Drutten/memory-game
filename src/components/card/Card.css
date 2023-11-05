@@ -1,3 +1,10 @@
 .Card {
-    
+  width: 100%; /* Card will fill the list item */
+  max-width: 180px;
+  aspect-ratio: 1; /* Assuming you want the cards to be square */
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
 }
