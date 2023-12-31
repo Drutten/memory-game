@@ -4,7 +4,19 @@
   aspect-ratio: 1; /* Assuming you want the cards to be square */
 }
 
+.clickable {
+  cursor: pointer;
+}
+
 img {
   width: 100%;
   object-fit: cover;
+}
+
+.displayed {
+  display: block;
+}
+
+.not-displayed {
+  display: none;
 }

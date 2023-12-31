@@ -1,13 +1,29 @@
 import './Card.css';
 
-const Card = ({ card, imageUrlBack }) => {
-  const {imageUrl, imageId} = card;
-  const imageNameStart = imageUrl.lastIndexOf('/');
-  const imageName = imageUrl.substring(imageNameStart + 1, imageUrl.lastIndexOf('.'));
-  // console.log(imageName);
+const Card = ({
+  card: { id, imageUrl, imageUrlBack, imageId, isOpen, isClickable },
+  selectCard,
+}) => {
+  const imageName = imageUrl.split('/').pop().split('.')[0];
+
+  const handleClick = () => {
+    if (isClickable) {
+      selectCard({ id, imageUrl, imageUrlBack, imageId, isOpen, isClickable });
+    }
+  };
+
   return (
-    <div className='Card'>
-      <img src={ imageUrl } alt={ imageName } />
+    <div className={ `Card ${isClickable ? 'clickable' : ''}` } onClick={ handleClick }>
+      <img
+        src={ imageUrl }
+        alt={ imageName }
+        className={ isOpen ? 'displayed' : 'not-displayed' }
+      />
+      <img
+        src={ imageUrlBack }
+        alt='back'
+        className={ !isOpen ? 'displayed' : 'not-displayed' }
+      />
     </div>
   );
 }

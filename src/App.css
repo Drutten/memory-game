@@ -23,6 +23,15 @@ h1 {
   cursor: pointer;
 }
 
+.main-game-button {
+  background: none;
+  border: 2px solid rgb(223, 103, 52);
+  border-radius: 4px;
+  padding: 12px 24px;
+  color: rgb(223, 103, 52);
+  cursor: pointer;
+}
+
 button:hover {
   background: rgb(247, 243, 242);
 }
