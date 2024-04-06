@@ -8,6 +8,16 @@ h1 {
   text-align: center;
 }
 
+.responsive-image {
+  width: 90%;
+  height: auto;
+  display: block;
+  border: 2px solid rgb(215, 212, 212);
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 16px auto;
+}
+
 .game-area {
   text-align: center;
   width: 90%;
@@ -89,6 +99,9 @@ img {
 @media (min-width: 600px) {
   .card-area li {
     width: 130px;
+  }
+  .responsive-image {
+    width: 60%;
   }
 }
 

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import './App.css';
 import Card from './components/card/Card';
+import imageMemoryNotes from './memory-notes.PNG';
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -153,7 +154,15 @@ function App() {
           <button className='new-game' onClick={startGame}>New Game</button>
         </>)}
 
-        {!gameStarted && <button className='main-game-button' onClick={startGame}>New Game</button>}
+        {!gameStarted && (
+        <>
+          <button className='main-game-button' onClick={startGame}>New Game</button>
+          <img
+            src={ imageMemoryNotes }
+            alt='Memory notes'
+            className='responsive-image'
+          />
+        </>)}
       </div>
     </div>
   );
